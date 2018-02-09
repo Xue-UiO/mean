@@ -1,6 +1,9 @@
 def mean(num_list):
 	try:
-		mean = sum(num_list)/len(num_list)
+	#	mean = sum(num_list)/len(num_list)
+	# fail on different version tests
+		mean = sum(num_list)/float(len(num_list))
+	# fix the 2.7 version fail 		
 		if isinstance(mean, complex):
 			return NotImplemented
 		return mean
