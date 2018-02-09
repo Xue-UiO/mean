@@ -16,4 +16,13 @@ def test_long():
     big = 100000000
     obs = mean(range(1,big))
     exp = big/2.0
-    assert obs == exp 
+    assert obs == exp
+
+# add a test that is wrong to test fail in Travis
+def test_complex():
+# testing for complex numbers
+# as arithmetic mean of comlex number is meaningless
+    num_list = [2+3j, 3+4j, -32 - 2j]
+    obs = mean(num_list)
+    exp = NotImplemented
+    assert obs == exp
